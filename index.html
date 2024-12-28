@@ -1,1 +1,695 @@
-<h1> if you opened this 'SORRY' <h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell 2024</title>
+    <style>
+      @media (max-width: 1024px) {
+    body {
+        font-size: 1em; /* Adjust overall font scaling */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .countdown {
+        font-size: 2.5em;
+    }
+
+    .slider-wrapper {
+        max-width: 100%; /* Full width for smaller devices */
+    }
+
+    #moving-text h1 {
+        font-size: 6vh; /* Reduce size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        font-size: 2em;
+        padding: 5px;
+    }
+
+    .message {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    #moving-text h1 {
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wdth,wght@75..100,400..700&family=League+Spartan:wght@100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Berkshire+Swash&family=DynaPuff:wdth,wght@75..100,400..700&family=League+Spartan:wght@100..900&display=swap');
+
+        
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #000;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .countdown {
+            /*font-size: 3em;z
+            font-weight: bold;
+            margin: 20px 0;
+            color: black;*/
+            position: absolute;
+            /* Place it above the video */
+            top: 55%;
+            /* Adjust positioning */
+            left: 50%;
+            /* Center it horizontally */
+            transform: translateX(-50%);
+            /* Align the center */
+            font-size: 4em;
+            font-weight: bold;
+            color: white;
+            /*background-color: rgba(255, 255, 255, 0.8); Add semi-transparent background*/
+            padding: 10px 20px;
+            border-radius: 10px;
+            /* Rounded corners for better visuals */
+            z-index: 2;
+            /* Ensure it is above the video */
+            font-family: league spartan, serif;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            font-weight: bold;
+            padding-top: 5vw;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .message {
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        #page2 {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #f7f7f7;
+            /*paddingt: 8vw;*/
+            /*padding-top: 1vw;*/
+
+        }
+
+        #moving-text {
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        #moving-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        .con {
+            /*background-color: lightblue;*/
+            display: inline-block;
+            animation: move;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        #moving-text h1 {
+            font-size: 9vh;
+            /*background-color: lightblue;*/
+            display: inline-block;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        .page3 {
+            min-height: 100vh;
+            width: 100%;
+            background-color: white;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .slider {
+            display: flex;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            border-radius: 0.5rem;
+            -ms-overflow-style: none;
+            /* Hide scrollbar IE and Edge */
+            scrollbar-width: none;
+            /* Hide scrollbar Firefox */
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider img {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .slider-nav a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+        }
+
+        .slider-nav a:hover {
+            opacity: 1;
+        }
+
+        .textpage2 h1 {
+
+            font-size: 9vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>FAREWELL 2024</h1>
+    </div>
+
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="media/vide0-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="countdown" id="countdown">11 : 15 : 31 : 25</div>
+        <div style="position: absolute; bottom: 10%; width: 100%;">
+            <h2 style="color:white; font-family: league spartan , serif; font-size: 2rem;">Left To Create New Memories
+            </h2>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>A SPECIAL FAREWELL TO 2024</h2>
+        <div class="message">
+            <p>Dear NUMAIRA,</p>
+            <p>As we close the chapter on 2024, I wanted to take a moment to celebrate you. This year, you’ve been a
+                source of inspiration, warmth, and light in ways you might not even realize.</p>
+        </div>
+    </div>
+
+    <div id="page2">
+        <div id="moving-text">
+            <div class="con">
+                <h1>&nbsp;A SPECIAL&nbsp; FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+            </div>
+                        <div class="con">
+                <h1>&nbsp;A SPECIAL&nbsp; FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+            </div>
+
+        </div>
+        <div class="paragraph-page" style="padding-top: 5vw;">
+
+            <P>spark Joy This Year.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every Moment Counts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let’s Make Magic in 2025
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let’s Make Magic in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year,
+                Endless Possibilities.
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>New Year, Endless Possibilities.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>Smiles All Around.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>2025 new Beggining.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>he Best is Yet to Come.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>Smiles All Around.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>2024 MAKING MEMORIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New
+                Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in
+                2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New
+                Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheers to a New Year!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025: A Fresh
+                Start.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dream Big in 2025&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrate New
+                Beginnings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year, New Adventures.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+
+
+
+        </div>
+        <div id="moving-text">
+            <div class="con">
+                <h1>&nbsp;A SPECIA LFAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL FAREWELL TO 2024 &nbsp;</h1>
+            </div>
+                        <div class="con">
+                <h1>&nbsp;A SPECIAL&nbsp; FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+                <h1>&nbsp;A SPECIAL &nbsp;FAREWELL TO 2024 &nbsp;</h1>
+            </div>
+
+        </div>
+        <div class="page3" style="height: 100vh; width: 100%; padding-bottom: 700px;">
+            <div class="textpage2">
+                <h1 style="font-size: 9vh;"> MOONS OF 2024</h1>
+                <p style="font-family: league spartan, serif; font-weight: 200;">place mouse courser on the image and
+                    swipe left to see next image</p>
+            </div>
+            <section class="container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide-1" src="media/moon-1.png" alt="moon-1" />
+                        <img id="slide-2" src="media/moon-2.png" alt="moon-2" />
+                        <img id="slide-3" src="media/moon-3.png" alt="moon-3" />
+                        <img id="slide-4" src="media/moon-4.png" alt="moon-4" />
+                        <img id="slide-5" src="media/moon-5.png" alt="moon-5" />
+                        <img id="slide-6" src="media/moon-6.png" alt="moon-6" />
+
+                        <img id="slide-7" src="media/moon-7.png" alt="moon-7" />
+                        <img id="slide-8" src="media/moon-8.png" alt="moon-8" />
+                        <img id="slide-9" src="media/moon-9.png" alt="moon-9" />
+                        <img id="slide-10" src="media/moon-10.png" alt="moon-10" />
+                        <img id="slide-11" src="media/moon-11.png" alt="moon-11" />
+                        <img id="slide-12" src="media/moon-12.png" alt="moon-12" />
+                        <img id="slide-13" src="media/moon-13.png" alt="moon-13" />
+
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                    </div>
+                </div>
+                <section class="page4"
+                    style="height: 50vh; width: 100%; text-align: center; padding: none; background-color: #f7f7f7; margin-top: 12vh;">
+                    <div class="page4-text" style="font-size:2vh; font-family:League Spartan, serif; font-weight: 400;">
+                        <div>
+                            <h1></h1>
+                            <h1 style="font-family: League Spartan, serif;
+                            font-optical-sizing: auto;
+                            font-weight: 600;
+                            font-style: normal;"">As 2024 comes to an end, I can’t help but reflect on all the moments that made this year special. Whether it was milestones or the little things, each one brought a unique joy. Here’s to a year filled with growth, memories, and so much to be grateful for. May 2025 be even more beautiful for you.
+                               </h1>
+                        </div>
+                    </div>
+                </section>
+
+                <div class=" box-page" style="height: 20vh; width: 100%; background-color: white;">
+
+                                <h1 style=" background-color: white;   font-family: Berkshire Swash, serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 3 rem;"> Visual Representation of My Life</h1>
+                        </div>
+
+                        <div class="box-container" style="display: flex;">
+
+                            <div class="left-box" style="height: 80vh; width:50% ; background-color: white;">
+
+                                <h1 style="font-family: league spartan, serif; font-weight: 400;"> Before 2024 </h1>
+
+                                <video src="media/video-2.mp4" autoplay loop muted style="width: 70%;"></video>
+
+                                <h1 style="font-family: league spartan, serif; font-weight: 200;"> Before Talking to you
+                                </h1>
+
+
+
+
+                            </div>
+
+                            <div class="right-box" style="height: 80vh; width: 50%; background-color: white;">
+
+                                <h1 style="font-family: League Spartan, serif; font-weight: 400;"> In 2024 (last 3
+                                    months)</h1>
+
+                                <video src="media/video-3.mp4" autoplay loop muted style="width: 70%;"></video>
+
+                                <h1 style="font-family: league spartan, serif; font-weight: 200;"> After Talking to you
+                                </h1>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <!--<div  >
+                    <div class="text-11" style="height: 40vh; width: 100%;">
+                    <p style="font-family: League Spartan, serif;
+                    font-optical-sizing: ;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 2vh;">Goodbye, 2024—you’ve been a wild ride! From unexpected surprises to moments of pure joy, this year will always hold a special place. As we step into 2025, I hope it brings laughter, success, and endless reasons to smile. Here’s to leaving the past behind and embracing what’s next with open arms!</p>
+
+                </div>
+            </div>-->
+                        <section class="page4 "
+                            style=" background-color: #f7f7f7;   height: 50vh; width: 100%; text-align: center; padding: none;">
+                            <div class="page4-text"
+                                style="font-size:2vh; font-family:League Spartan, serif; font-weight: 400;">
+                                <div>
+                                    <h1></h1>
+                                    <h1 style="font-family: League Spartan, serif;
+                            font-optical-sizing: auto;
+                            font-weight: 600;
+                            font-style: normal;""> Goodbye, 2024—you’ve been a wild ride! From unexpected surprises to moments of pure joy, this year will always hold a special place. As we step into 2025, I hope it brings laughter, success, and endless reasons to smile. Here’s to leaving the past behind and embracing what’s next with open arms!
+                               </h1>
+                        </div>
+                    </div>
+                </section>
+
+                
+
+                <!--ENDDDD-->
+
+
+                <div class=" ppt-page" style="background-color: white;">
+
+                                        <div class="ppt-text" style="z-index: 10;">
+                                            <h1 style="font-family: Berkshire Swash, serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 80px; height:"> Recipe of the Year</h1>
+                                            <P> SWIPE LEFT FOR NEXT SLIDE</P>
+                                        </div>
+
+                                        <div class="ppt-slides" style="background-color: white;">
+
+                                            <div class="container-slides">
+
+                                                <img src="media/icon-1.png" class="arrow left">
+
+                                                <div class="frame">
+
+
+                                                    <div class="ppt-slider">
+
+                                                        <img src="media/1.png" class="image">
+                                                        <img src="media/2.png" class="image">
+                                                        <img src="media/3.png" class="image">
+                                                        <img src="media/4.png" class="image">
+                                                        <img src="media/5.png" class="image">
+                                                        <img src="media/6.png" class="image">
+                                                        <img src="media/7.png" class="image">
+                                                        <img src="media/8.png" class="image">
+                                                        <img src="media/9.png" class="image">
+                                                        <img src="media/10.png" class="image">
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                                <img src="media/icon-1.png" class="arrow right">
+                                            </div>
+
+
+                                        </div>
+
+                                </div>
+                                <section class="page4"
+                                    style="background-color: #f7f7f7;  height: 50vh; width: 100%; text-align: center; padding: none;">
+                                    <div class="page4-text"
+                                        style="font-size:2vh; font-family:League Spartan, serif; font-weight: 400;">
+                                        <div>
+                                            <h1></h1>
+                                            <h1 style="font-family: League Spartan, serif;
+                        font-optical-sizing: auto;
+                        font-weight: 600;
+                        font-style: normal;"> 2024 is drawing to a close, marking the end of a chapter filled with
+                                                unforgettable moments. Each day carried lessons, memories, and so much
+                                                to cherish. As 2025 begins, I hope it brings you peace, excitement, and
+                                                dreams that come true. Let’s welcome this new chapter with hope and
+                                                happiness
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <div class="lastpage" style="background-color: white; height: 38vh; width: 100%;;">
+                                    <img class="img_deg" src="media/flower1.png" alt="flower"
+                                        style="float: right; width: 30%;">
+                                    <p style=" font-size: 50px; font-family: league spartan,serif; font-weight: 400; ;">
+                                        <br><br><br> This is for you bcz no matter <br> how tough this year was, <br>You
+                                        made it brighter</p>
+
+                                </div>
+
+                                <div class="footer" style="background-color: black;">
+                                    <p
+                                        style="height: auto ; font-family: league spartan, serif; font-weight: 400; font-size: 55px;">
+                                        thankyou for beimg you</p>
+                                </div>
+
+
+
+                                <style>
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Berkshire+Swash&family=DynaPuff:wdth,wght@75..100,400..700&family=League+Spartan:wght@100..900&display=swap');
+                                    .ppt-slides {
+                                        background-color: grey;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 80vh;
+                                    }
+
+                                    .container-slides {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 50px;
+                                    }
+
+                                    .arrow {
+                                        height: 100px;
+                                        cursor: pointer;
+                                        margin-top: 20%;
+                                    }
+
+                                    .right {
+                                        transform: rotate(180deg);
+                                    }
+
+                                    .frame {
+                                        padding-top: 22vh;
+                                        width: 800px;
+                                        height: 500px;
+                                        overflow: hidden;
+                                        /*box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);*/
+                                    }
+
+                                    .ppt-slider {
+                                        display: flex;
+                                        transition: all 1s ease;
+                                    }
+
+                                    .image {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                </style>
+
+                                <script>
+                                    // Countdown Timer Script
+                                    const countdownElement = document.getElementById('countdown');
+                                    const targetDate = new Date('January 1, 2025 00:00:00').getTime();
+
+                                    function updateCountdown() {
+                                        const now = new Date().getTime();
+                                        const timeLeft = targetDate - now;
+
+                                        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                                        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                                        countdownElement.textContent = `${days.toString().padStart(2, '0')} : ${hours.toString().padStart(2, '0')} : ${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
+
+                                        if (timeLeft < 0) {
+                                            countdownElement.textContent = "Happy New Year!";
+                                        }
+                                    }
+
+                                    setInterval(updateCountdown, 1000);
+                                </script>
+                                <script>
+                                    const left = document.querySelector('.left');
+                                    const right = document.querySelector('.right');
+                                    const slider = document.querySelector('.ppt-slider');
+                                    const images = document.querySelectorAll('.image');
+
+                                    let slideNumber = 1; // Single declaration
+                                    const imageWidth = 800; // Define a constant for image width
+                                    const length = images.length;
+
+                                    const nextSlide = () => {
+                                        slider.style.transform = `translateX(-${slideNumber * imageWidth}px)`;
+                                        slideNumber++;
+                                    };
+
+                                    const prevSlide = () => {
+                                        slider.style.transform = `translateX(-${(slideNumber - 2) * imageWidth}px)`;
+                                        slideNumber--;
+                                    };
+
+                                    const getFirstSlide = () => {
+                                        slider.style.transform = `translateX(0px)`;
+                                        slideNumber = 1;
+                                    };
+
+                                    const getLastSlide = () => {
+                                        slider.style.transform = `translateX(-${(length - 1) * imageWidth}px)`;
+                                        slideNumber = length;
+                                    };
+
+                                    // Event listener for right arrow
+                                    right.addEventListener('click', () => {
+                                        slideNumber < length
+                                            ? nextSlide()
+                                            : getFirstSlide();
+                                    });
+
+                                    // Event listener for left arrow
+                                    left.addEventListener('click', () => {
+                                        slideNumber > 1
+                                            ? prevSlide()
+                                            : getLastSlide();
+                                    });
+
+
+
+
+
+                                </script>
+</body>
+
+</html>
+
